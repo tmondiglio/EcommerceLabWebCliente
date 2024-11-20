@@ -1,0 +1,45 @@
+body {
+    padding-top: 56px;
+    background-color: #ffffff;
+}
+
+#navbar {
+    background-color: rgba(221, 229, 182, 0.8);
+    backdrop-filter: blur(5px);
+
+}
+
+#btnSideBar{
+    background-color: #adc178;
+}
+
+#sideBarCart {
+    background-color: #f0ead2;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 2px;
+    background-color: rgba(221, 229, 182, 0.8);
+}
+
+footer .mapa,
+footer .redes,
+footer .mapa h4 {
+    padding-bottom: 5px;
+}
+
+footer .redes a {
+    color: #4d4646;
+    text-decoration: none;
+}
+
+footer .redes a img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 5px;
+}
