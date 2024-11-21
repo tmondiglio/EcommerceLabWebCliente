@@ -1,3 +1,5 @@
+import { deleteProduct, emptyCart, checkout } from "./toast.js";
+
 export function addToCart() {
   let cartLs = JSON.parse(localStorage.getItem("prodCart")) || [];
   let sideBarCart = document.querySelector("#sideBarCart");
@@ -27,13 +29,11 @@ export function addToCart() {
                             <h6 class="m-2">Total: $<span id="totalPrice-${
                               p.id
                             }">${p.price * p.quantity}</span></h6>
-                            <button type="button" class="btn btn-outline-danger" id="btnDelete-${
-                              p.id
-                            }" onclick="deleteProduct(${
-      p.id
-    }, cartLs, this.closest('.card'))">
-                                <i class="bi bi-trash"></i>
-                            </button>
+                              <button type="button" class="btn btn-outline-danger" id="btnDelete-${
+                                p.id
+                              }">
+        <i class="bi bi-trash"></i>
+    </button>
                         </div>
                     </div>
                 </div>
@@ -49,9 +49,7 @@ export function addToCart() {
                     <i class="bi bi-trash3 me-2"></i>Vaciar Carrito
                 </button>
                 <button type="button" class="btn btn-success" id="btnCheckout">
-                    <i class="bi bi-bag-check
-
- me-2"></i>Finalizar Compra
+                    <i class="bi bi-bag-check me-2"></i>Finalizar Compra
                 </button>
             </div>
         `;
@@ -86,10 +84,23 @@ export function addToCart() {
     });
 
     btnDelete.addEventListener("click", () => {
-      deleteProduct(p.id, cartLs, card);
+      deleteProduct(p.id, cartLs, card, sideBarCart, offcanvasElement);
     });
   });
 
   const btnEmptyCart = document.querySelector("#btnEmptyCart");
   const btnCheckout = document.querySelector("#btnCheckout");
+  const offcanvasElement = document.querySelector("#offcanvasRight");
 
+  if (btnEmptyCart) {
+    btnEmptyCart.addEventListener("click", () => {
+      emptyCart(cartLs, sideBarCart, offcanvasElement);
+    });
+  }
+
+  if (btnCheckout) {
+    btnCheckout.addEventListener("click", () => {
+      checkout(cartLs, sideBarCart, offcanvasElement);
+    });
+  }
+}
