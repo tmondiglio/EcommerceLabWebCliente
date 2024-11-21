@@ -43,7 +43,7 @@ export function createCards() {
                             <button type="button" 
                                     class="btn btn-detail mt-auto" 
                                     id="btn-${prod.id}">
-                                <i class="fas fa-info-circle me-2"></i>Details
+                                <i class="fas fa-info-circle me-2"></i>Detalles
                             </button>  
                         </div>
                     </div>
