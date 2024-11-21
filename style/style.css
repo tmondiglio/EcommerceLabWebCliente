@@ -6,15 +6,103 @@ body {
 #navbar {
     background-color: rgba(221, 229, 182, 0.8);
     backdrop-filter: blur(5px);
-
 }
 
-#btnSideBar{
+#btnSideBar {
     background-color: #adc178;
 }
 
-#sideBarCart {
-    background-color: #f0ead2;
+/* Estilos para las cards de productos */
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: white;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de imagen */
+.img-container {
+    position: relative;
+    padding-top: 100%; /* Aspecto cuadrado */
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.product-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* Título del producto */
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Precio */
+.product-price {
+    color: #2980b9;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Botón de detalles */
+.btn-detail {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn-detail:hover {
+    background-color: #2980b9;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Botón de detalles */
+.details-button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.details-button:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
 }
 
 footer {
