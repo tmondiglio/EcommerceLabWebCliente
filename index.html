@@ -117,47 +117,66 @@
     </main>
 
     <footer id="footer">
-      <section class="redes" aria-labelledby="social-media-links">
-        <h3 id="social-media-links">Redes Sociales</h3>
-        <a href="https://www.instagram.com" target="blank" title="Instagram">
-          <img src="./images/instagram.jpg" alt="Instagram" />
-        </a>
-        <a href="https://www.facebook.com" target="blank" title="Facebook">
-          <img src="./images/facebook.jpg" alt="Facebook" />
-        </a>
-        <a href="https://wa.me/5493517551461" target="blank" title="Whatsapp">
-          <img src="./images/whatsapp1.jpg" alt="Whatsapp" />
-        </a>
-        <a
-          href="mailto:priscila.d.pace@gmail.com?Subject=Consulta"
-          target="blank"
-          title="Enviar email"
-        >
-          <img src="./images/gmail.jpg" alt="Enviar Email" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/priscila-denise-pace/"
-          target="blank"
-          title="Linkedin"
-        >
-          <img src="./images/linkedin.jpg" alt="Linkedin" />
-        </a>
-      </section>
-      <section class="mapa" aria-labelledby="location-map">
-        <h5 id="location-map">Donde estamos:</h5>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.06038912067!2d-64.26438422252431!3d-31.399434162351472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1647366496040!5m2!1ses!2sar"
-          width="200"
-          height="150"
-          style="border: 1px groove #6464614f"
-          allowfullscreen=""
-          loading="lazy"
-          title="Mapa de ubicación"
-        >
-        </iframe>
-      </section>
+        <div class="container">
+            <section class="redes" aria-labelledby="social-media-links">
+                <h3 id="social-media-links">Nuestras redes</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                        <img src="./images/instagram.jpg" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                        <img src="./images/facebook.jpg" alt="Facebook">
+                    </a>
+                    <a href="https://wa.me/5493517551461" target="_blank" title="Whatsapp">
+                        <img src="./images/whatsapp1.jpg" alt="Whatsapp">
+                    </a>
+                    <a href="mailto:priscila.d.pace@gmail.com?Subject=Consulta" target="_blank" title="Enviar email">
+                        <img src="./images/gmail.jpg" alt="Enviar Email">
+                    </a>
+                    <a href="https://www.linkedin.com/in/priscila-denise-pace/" target="_blank" title="Linkedin">
+                        <img src="./images/linkedin.jpg" alt="Linkedin">
+                    </a>
+                </div>
+            </section>
+   
+            <section class="form-section">
+                <h4>¿Quieres trabajar en AniExpress?</h4>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn</label>
+                        <input type="url" id="linkedin" name="linkedin" required>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="success-message" style="display: none;">Mensaje enviado</p>
+            </section>
+   
+            <section class="mapa" aria-labelledby="location-map">
+                <h5 id="location-map">Donde estamos:</h5>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.06038912067!2d-64.26438422252431!3d-31.399434162351472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1647366496040!5m2!1ses!2sar"
+                    width="100%" height="150" style="border: 0;" allowfullscreen="" loading="lazy"
+                    title="Mapa de ubicación">
+                </iframe>
+            </section>
+        </div>
     </footer>
-
+   
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('success-message').style.display = 'block';
+            this.reset();
+        });
+    </script>
     <script type="module" src="./index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
