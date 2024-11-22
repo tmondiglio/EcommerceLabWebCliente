@@ -1,4 +1,4 @@
-import { deleteProduct, emptyCart, checkout } from "./toast.js";
+import { deleteProduct, emptyCart, checkout } from "./cart-manager.js";
 
 export function addToCart() {
   let cartLs = JSON.parse(localStorage.getItem("prodCart")) || [];
