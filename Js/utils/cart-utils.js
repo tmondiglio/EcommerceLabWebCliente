@@ -26,9 +26,6 @@ export function listenToCartChanges() {
           }
         `;
 
-      if (!btnSideBar.classList.contains("position-relative")) {
-        btnSideBar.classList.add("position-relative");
-      }
     }
   }
 
